@@ -1,0 +1,840 @@
+version: 2
+sources:
+         - name: gaming_landing
+           description: ""
+           tables:
+             - name: ad_interactions
+               description: ""
+               columns:
+                 - name: adeventid
+                   data_type: string
+                   description: ""
+                 - name: playerid
+                   data_type: string
+                   description: ""
+                 - name: gameid
+                   data_type: string
+                   description: ""
+                 - name: deviceid
+                   data_type: string
+                   description: ""
+                 - name: platformcode
+                   data_type: string
+                   description: ""
+                 - name: countrycode
+                   data_type: string
+                   description: ""
+                 - name: campaignid
+                   data_type: string
+                   description: ""
+                 - name: mediasourceid
+                   data_type: string
+                   description: ""
+                 - name: adnetworkid
+                   data_type: string
+                   description: ""
+                 - name: datekey
+                   data_type: int64
+                   description: ""
+                 - name: adid
+                   data_type: string
+                   description: ""
+                 - name: adtype
+                   data_type: string
+                   description: ""
+                 - name: adplacement
+                   data_type: string
+                   description: ""
+                 - name: eventtype
+                   data_type: string
+                   description: ""
+                 - name: impressiontimestamp
+                   data_type: timestamp
+                   description: ""
+                 - name: clicktimestamp
+                   data_type: timestamp
+                   description: ""
+                 - name: conversiontimestamp
+                   data_type: timestamp
+                   description: ""
+                 - name: revenueamount
+                   data_type: float64
+                   description: ""
+                 - name: costamount
+                   data_type: float64
+                   description: ""
+                 - name: currencycode
+                   data_type: string
+                   description: ""
+                 - name: wasclicked
+                   data_type: boolean
+                   description: ""
+                 - name: wasconverted
+                   data_type: boolean
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: ad_networks
+               description: ""
+               columns:
+                 - name: adnetworkid
+                   data_type: string
+                   description: ""
+                 - name: adnetworkcode
+                   data_type: string
+                   description: ""
+                 - name: adnetworkname
+                   data_type: string
+                   description: ""
+                 - name: networktype
+                   data_type: string
+                   description: ""
+                 - name: accountname
+                   data_type: string
+                   description: ""
+                 - name: accountemail
+                   data_type: string
+                   description: ""
+                 - name: pricingmodel
+                   data_type: string
+                   description: ""
+                 - name: defaultcurrency
+                   data_type: string
+                   description: ""
+                 - name: website
+                   data_type: string
+                   description: ""
+                 - name: isactive
+                   data_type: boolean
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: campaigns
+               description: ""
+               columns:
+                 - name: campaignid
+                   data_type: string
+                   description: ""
+                 - name: campaigncode
+                   data_type: string
+                   description: ""
+                 - name: campaignname
+                   data_type: string
+                   description: ""
+                 - name: campaigntype
+                   data_type: string
+                   description: ""
+                 - name: campaignobjective
+                   data_type: string
+                   description: ""
+                 - name: startdate
+                   data_type: date
+                   description: ""
+                 - name: enddate
+                   data_type: date
+                   description: ""
+                 - name: budgetamount
+                   data_type: float64
+                   description: ""
+                 - name: currencycode
+                   data_type: string
+                   description: ""
+                 - name: targetcountrycode
+                   data_type: string
+                   description: ""
+                 - name: targetplatformcode
+                   data_type: string
+                   description: ""
+                 - name: campaignstatus
+                   data_type: string
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: countries
+               description: ""
+               columns:
+                 - name: countrycode
+                   data_type: string
+                   description: ""
+                 - name: iso3code
+                   data_type: string
+                   description: ""
+                 - name: countryname
+                   data_type: string
+                   description: ""
+                 - name: region
+                   data_type: string
+                   description: ""
+                 - name: subregion
+                   data_type: string
+                   description: ""
+                 - name: continent
+                   data_type: string
+                   description: ""
+                 - name: currencycode
+                   data_type: string
+                   description: ""
+                 - name: primarylanguage
+                   data_type: string
+                   description: ""
+                 - name: timezone
+                   data_type: string
+                   description: ""
+                 - name: callingcode
+                   data_type: string
+                   description: ""
+                 - name: isactive
+                   data_type: boolean
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             
+             - name: devices
+               description: ""
+               columns:
+                 - name: deviceid
+                   data_type: string
+                   description: ""
+                 - name: advertisingid
+                   data_type: string
+                   description: ""
+                 - name: devicetype
+                   data_type: string
+                   description: ""
+                 - name: manufacturer
+                   data_type: string
+                   description: ""
+                 - name: devicemodel
+                   data_type: string
+                   description: ""
+                 - name: operatingsystem
+                   data_type: string
+                   description: ""
+                 - name: osversion
+                   data_type: float64
+                   description: ""
+                 - name: appversion
+                   data_type: string
+                   description: ""
+                 - name: screenresolution
+                   data_type: string
+                   description: ""
+                 - name: networktype
+                   data_type: string
+                   description: ""
+                 - name: carriername
+                   data_type: string
+                   description: ""
+                 - name: devicelanguage
+                   data_type: string
+                   description: ""
+                 - name: istablet
+                   data_type: boolean
+                   description: ""
+                 - name: isemulator
+                   data_type: boolean
+                   description: ""
+                 - name: platformcode
+                   data_type: string
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: game_sessions
+               description: ""
+               columns:
+                 - name: sessionid
+                   data_type: string
+                   description: ""
+                 - name: playerid
+                   data_type: string
+                   description: ""
+                 - name: gameid
+                   data_type: string
+                   description: ""
+                 - name: deviceid
+                   data_type: string
+                   description: ""
+                 - name: platformcode
+                   data_type: string
+                   description: ""
+                 - name: countrycode
+                   data_type: string
+                   description: ""
+                 - name: datekey
+                   data_type: int64
+                   description: ""
+                 - name: sessionstarttimestamp
+                   data_type: timestamp
+                   description: ""
+                 - name: sessionendtimestamp
+                   data_type: timestamp
+                   description: ""
+                 - name: sessiondurationseconds
+                   data_type: int64
+                   description: ""
+                 - name: levelsplayed
+                   data_type: int64
+                   description: ""
+                 - name: levelscompleted
+                   data_type: int64
+                   description: ""
+                 - name: scoreearned
+                   data_type: int64
+                   description: ""
+                 - name: experiencepointsearned
+                   data_type: int64
+                   description: ""
+                 - name: eventsgenerated
+                   data_type: int64
+                   description: ""
+                 - name: iscompleted
+                   data_type: boolean
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: games
+               description: ""
+               columns:
+                 - name: gameid
+                   data_type: string
+                   description: ""
+                 - name: gamecode
+                   data_type: string
+                   description: ""
+                 - name: gamename
+                   data_type: string
+                   description: ""
+                 - name: genre
+                   data_type: string
+                   description: ""
+                 - name: developer
+                   data_type: string
+                   description: ""
+                 - name: publisher
+                   data_type: string
+                   description: ""
+                 - name: releasedate
+                   data_type: date
+                   description: ""
+                 - name: agerating
+                   data_type: string
+                   description: ""
+                 - name: currentversion
+                   data_type: string
+                   description: ""
+                 - name: gamemode
+                   data_type: string
+                   description: ""
+                 - name: ismultiplayer
+                   data_type: boolean
+                   description: ""
+                 - name: supportedplatform
+                   data_type: string
+                   description: ""
+                 - name: gamestatus
+                   data_type: string
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: in_app_purchases
+               description: ""
+               columns:
+                 - name: transactionid
+                   data_type: string
+                   description: ""
+                 - name: playerid
+                   data_type: string
+                   description: ""
+                 - name: gameid
+                   data_type: string
+                   description: ""
+                 - name: deviceid
+                   data_type: string
+                   description: ""
+                 - name: platformcode
+                   data_type: string
+                   description: ""
+                 - name: countrycode
+                   data_type: string
+                   description: ""
+                 - name: datekey
+                   data_type: int64
+                   description: ""
+                 - name: productid
+                   data_type: string
+                   description: ""
+                 - name: quantity
+                   data_type: int64
+                   description: ""
+                 - name: unitprice
+                   data_type: float64
+                   description: ""
+                 - name: grossamount
+                   data_type: float64
+                   description: ""
+                 - name: discountamount
+                   data_type: float64
+                   description: ""
+                 - name: taxamount
+                   data_type: float64
+                   description: ""
+                 - name: netamount
+                   data_type: float64
+                   description: ""
+                 - name: currencycode
+                   data_type: string
+                   description: ""
+                 - name: purchasetimestamp
+                   data_type: timestamp
+                   description: ""
+                 - name: paymentmethod
+                   data_type: string
+                   description: ""
+                 - name: paymentstatus
+                   data_type: string
+                   description: ""
+                 - name: isrefunded
+                   data_type: boolean
+                   description: ""
+                 - name: refundamount
+                   data_type: float64
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: installs
+               description: ""
+               columns:
+                 - name: installid
+                   data_type: string
+                   description: ""
+                 - name: playerid
+                   data_type: string
+                   description: ""
+                 - name: gameid
+                   data_type: string
+                   description: ""
+                 - name: deviceid
+                   data_type: string
+                   description: ""
+                 - name: platformcode
+                   data_type: string
+                   description: ""
+                 - name: countrycode
+                   data_type: string
+                   description: ""
+                 - name: campaignid
+                   data_type: string
+                   description: ""
+                 - name: mediasourceid
+                   data_type: string
+                   description: ""
+                 - name: adnetworkid
+                   data_type: string
+                   description: ""
+                 - name: datekey
+                   data_type: int64
+                   description: ""
+                 - name: appsflyerid
+                   data_type: string
+                   description: ""
+                 - name: installtimestamp
+                   data_type: timestamp
+                   description: ""
+                 - name: clicktimestamp
+                   data_type: timestamp
+                   description: ""
+                 - name: impressiontimestamp
+                   data_type: timestamp
+                   description: ""
+                 - name: attributiontype
+                   data_type: string
+                   description: ""
+                 - name: isorganic
+                   data_type: boolean
+                   description: ""
+                 - name: acquisitioncost
+                   data_type: float64
+                   description: ""
+                 - name: currencycode
+                   data_type: string
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: media_sources
+               description: ""
+               columns:
+                 - name: mediasourceid
+                   data_type: string
+                   description: ""
+                 - name: mediasourcecode
+                   data_type: string
+                   description: ""
+                 - name: mediasourcename
+                   data_type: string
+                   description: ""
+                 - name: providername
+                   data_type: string
+                   description: ""
+                 - name: channeltype
+                   data_type: string
+                   description: ""
+                 - name: traffictype
+                   data_type: string
+                   description: ""
+                 - name: attributionprovider
+                   data_type: string
+                   description: ""
+                 - name: ispaid
+                   data_type: boolean
+                   description: ""
+                 - name: isactive
+                   data_type: boolean
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: platforms
+               description: ""
+               columns:
+                 - name: platformcode
+                   data_type: string
+                   description: ""
+                 - name: platformname
+                   data_type: string
+                   description: ""
+                 - name: platformcategory
+                   data_type: string
+                   description: ""
+                 - name: storename
+                   data_type: string
+                   description: ""
+                 - name: operatingsystemfamily
+                   data_type: string
+                   description: ""
+                 - name: vendorname
+                   data_type: string
+                   description: ""
+                 - name: storeurl
+                   data_type: string
+                   description: ""
+                 - name: ismobile
+                   data_type: boolean
+                   description: ""
+                 - name: isactive
+                   data_type: boolean
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: player_events
+               description: ""
+               columns:
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: sequencenumber
+                   data_type: int64
+                   description: ""
+                 - name: eventvalue
+                   data_type: float64
+                   description: ""
+                 - name: levelnumber
+                   data_type: int64
+                   description: ""
+                 - name: playerid
+                   data_type: string
+                   description: ""
+                 - name: eventtype
+                   data_type: string
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: eventpropertiesjson
+                   data_type: string
+                   description: ""
+                 - name: datekey
+                   data_type: int64
+                   description: ""
+                 - name: eventname
+                   data_type: string
+                   description: ""
+                 - name: sessionid
+                   data_type: string
+                   description: ""
+                 - name: platformcode
+                   data_type: string
+                   description: ""
+                 - name: deviceid
+                   data_type: string
+                   description: ""
+                 - name: issuccessful
+                   data_type: boolean
+                   description: ""
+                 - name: eventtimestamp
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+                 - name: gameid
+                   data_type: string
+                   description: ""
+                 - name: countrycode
+                   data_type: string
+                   description: ""
+                 - name: eventid
+                   data_type: string
+                   description: ""
+       
+             - name: players
+               description: ""
+               columns:
+                 - name: playerid
+                   data_type: string
+                   description: ""
+                 - name: username
+                   data_type: string
+                   description: ""
+                 - name: firstname
+                   data_type: string
+                   description: ""
+                 - name: lastname
+                   data_type: string
+                   description: ""
+                 - name: email
+                   data_type: string
+                   description: ""
+                 - name: mobilenumber
+                   data_type: int64
+                   description: ""
+                 - name: birthday
+                   data_type: date
+                   description: ""
+                 - name: gender
+                   data_type: string
+                   description: ""
+                 - name: addressline1
+                   data_type: string
+                   description: ""
+                 - name: addressline2
+                   data_type: string
+                   description: ""
+                 - name: city
+                   data_type: string
+                   description: ""
+                 - name: postcode
+                   data_type: int64
+                   description: ""
+                 - name: countrycode
+                   data_type: string
+                   description: ""
+                 - name: preferredlanguage
+                   data_type: string
+                   description: ""
+                 - name: registrationdate
+                   data_type: date
+                   description: ""
+                 - name: accountstatus
+                   data_type: string
+                   description: ""
+                 - name: viplevel
+                   data_type: string
+                   description: ""
+                 - name: marketingconsent
+                   data_type: boolean
+                   description: ""
+                 - name: isactive
+                   data_type: boolean
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: product_categories
+               description: ""
+               columns:
+                 - name: categoryid
+                   data_type: string
+                   description: ""
+                 - name: categorycode
+                   data_type: string
+                   description: ""
+                 - name: categoryname
+                   data_type: string
+                   description: ""
+                 - name: categorydescription
+                   data_type: string
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: product_subcategories
+               description: ""
+               columns:
+                 - name: subcategoryid
+                   data_type: string
+                   description: ""
+                 - name: categoryid
+                   data_type: string
+                   description: ""
+                 - name: subcategorycode
+                   data_type: string
+                   description: ""
+                 - name: subcategoryname
+                   data_type: string
+                   description: ""
+                 - name: subcategorydescription
+                   data_type: string
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
+       
+             - name: products
+               description: ""
+               columns:
+                 - name: productid
+                   data_type: string
+                   description: ""
+                 - name: productcode
+                   data_type: string
+                   description: ""
+                 - name: productname
+                   data_type: string
+                   description: ""
+                 - name: subcategoryid
+                   data_type: string
+                   description: ""
+                 - name: producttype
+                   data_type: string
+                   description: ""
+                 - name: description
+                   data_type: string
+                   description: ""
+                 - name: defaultprice
+                   data_type: float64
+                   description: ""
+                 - name: currencycode
+                   data_type: string
+                   description: ""
+                 - name: isconsumable
+                   data_type: boolean
+                   description: ""
+                 - name: isactive
+                   data_type: boolean
+                   description: ""
+                 - name: inserted_at
+                   data_type: timestamp
+                   description: ""
+                 - name: updated_at
+                   data_type: timestamp
+                   description: ""
+                 - name: source_name
+                   data_type: string
+                   description: ""
