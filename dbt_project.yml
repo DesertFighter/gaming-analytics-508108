@@ -2,12 +2,11 @@
 # Mobile Gaming Analytics - dbt Project
 # ============================================================
 
-name: 'gaming_analytics'
-version: '1.0.0'
+name: "gaming_analytics"
+version: "1.0.0"
 config-version: 2
 
-profile: 'default'
-
+profile: "default"
 
 # ============================================================
 # Project paths
@@ -26,15 +25,12 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-
 # ============================================================
 # Medallion Architecture
 # ============================================================
 
 models:
-
   gaming_analytics:
-
     # --------------------------------------------------------
     # BRONZE
     # Historical / lightly standardized source data
@@ -42,7 +38,6 @@ models:
     bronze:
       +materialized: incremental
       +schema: bronze
-
 
     # --------------------------------------------------------
     # SILVER
@@ -52,7 +47,6 @@ models:
     silver:
       +materialized: incremental
       +schema: silver
-
 
     # --------------------------------------------------------
     # GOLD
