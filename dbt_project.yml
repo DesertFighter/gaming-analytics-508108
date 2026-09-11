@@ -31,9 +31,9 @@ clean-targets:
 
 models:
   gaming_analytics:
+
     # --------------------------------------------------------
     # BRONZE
-    # Historical / lightly standardized source data
     # --------------------------------------------------------
     bronze:
       +materialized: incremental
@@ -41,8 +41,6 @@ models:
 
     # --------------------------------------------------------
     # SILVER
-    # Cleansed, validated, deduplicated and conformed data
-    # Includes dimensions and detailed fact tables
     # --------------------------------------------------------
     silver:
       +materialized: incremental
@@ -50,8 +48,16 @@ models:
 
     # --------------------------------------------------------
     # GOLD
-    # Final analytical / OBT / aggregated business outputs
     # --------------------------------------------------------
     gold:
       +materialized: materialized_view
       +schema: gold
+
+# ============================================================
+# SNAPSHOTS
+# dbt SCD Type 2 history tracking
+# ============================================================
+
+snapshots:
+  gaming_analytics:
+    +schema: snapshots
